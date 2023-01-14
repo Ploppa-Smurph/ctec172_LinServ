@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-172 Linux Server wk 02 Chapter 01 Intro</title>
+</head>
+<body>
+<h1>CTEC-172 Linux Server wk 02 Chapter 01 Intro</h1>
+<pre>
+<img src="https://rha.ole.redhat.com/rha/static/static_file_cache/rh124-8.2/classroom/RH124-Classroom-Architecture.svg">
+In this course, the main computer system used for hands-on learning activities is workstation. Two other machines are also used by students for these activities: servera, and serverb. All three of these systems are in the lab.example.com DNS domain.
+
+All student computer systems have a standard user account, student, which has the password student. The root password on all student systems is redhat.
+
+<b>Table 1. Classroom Machines</b>
+
+Machine name	              IP addresses	    Role
+------------                  ------------      -----  
+bastion.lab.example.com	      172.25.250.254	Gateway system to connect student private network to classroom server (must always be running)
+workstation.lab.example.com	  172.25.250.9	    Graphical workstation used for system administration
+servera.lab.example.com	      172.25.250.10	    First server
+serverb.lab.example.com	      172.25.250.11	    Second server
+
+The primary function of bastion is that it acts as a router between the network that connects the student machines and the classroom network. If bastion is down, other student machines will only be able to access systems on the individual student network.
+
+Several systems in the classroom provide supporting services. Two servers, content.example.com and materials.example.com, are sources for software and lab materials used in hands-on activities. Information on how to use these servers is provided in the instructions for those activities. These are provided by the classroom.example.com virtual machine. Both classroom and bastion should always be running for proper use of the lab environment.
+
+* Note * - When logging on to servera or serverb you might see a message concerning the activation of cockpit. The message can be ignored.
+
+[student@workstation ~]$ ssh student@serverb
+Warning: Permanently added 'serverb,172.25.250.11' (ECDSA) to the list of known hosts.
+Activate the web console with: systemctl enable --now cockpit.socket
+
+[student@serverb ~]$ 
+Controlling Your Systems
+You are assigned remote computers in a Red Hat Online Learning classroom. They are accessed through a web application hosted at rol.redhat.com. You should log in to this site using your Red Hat Customer Portal user credentials.
+
+Controlling the Virtual Machines - The virtual machines in your classroom environment are controlled through a web page. The state of each virtual machine in the classroom is displayed on the page under the Online Lab tab.
+
+<b>Table 2. Machine States</b>
+
+Virtual Machine State	Description
+---------------------   ------------
+STARTING	            The virtual machine is in the process of booting.
+STARTED	                The virtual machine is running and available (or, when booting, soon will be).
+STOPPING	            The virtual machine is in the process of shutting down.
+STOPPED	                The virtual machine is completely shut down. Upon starting, the virtual machine boots into the same state as when it was shut down (the disk will have been preserved).
+PUBLISHING	            The initial creation of the virtual machine is being performed.
+WAITING_TO_START	    The virtual machine is waiting for other virtual machines to start.
+
+Depending on the state of a machine, a selection of the following actions is available.
+
+<b>Table 3. Classroom/Machine Actions</b>
+
+Button or Action	     Description
+----------------         ------------
+PROVISION LAB	         Create the ROL classroom. Creates all of the virtual machines needed for the classroom and starts them. Can take several minutes to complete.
+DELETE LAB	             Delete the ROL classroom. Destroys all virtual machines in the classroom. Caution: Any work generated on the disks is lost.
+START LAB	             Start all virtual machines in the classroom.
+SHUTDOWN LAB	         Stop all virtual machines in the classroom.
+OPEN CONSOLE	         Open a new tab in the browser and connect to the console of the virtual machine. You can log in directly to the virtual machine and run commands. In most cases, you should log in to the workstation virtual machine and use ssh to connect to the other virtual machines.
+ACTION → Start	         Start (power on) the virtual machine.
+ACTION → Shutdown	     Gracefully shut down the virtual machine, preserving the contents of its disk.
+ACTION → Power Off	     Forcefully shut down the virtual machine, preserving the contents of its disk. This is equivalent to removing the power from a physical machine.
+ACTION → Reset	         Forcefully shut down the virtual machine and reset the disk to its initial state. Caution: Any work generated on the disk is lost.
+
+At the start of an exercise, if instructed to reset a single virtual machine node, click ACTION → Reset for only the specific virtual machine.
+
+At the start of an exercise, if instructed to reset all virtual machines, click ACTION → Reset
+
+If you want to return the classroom environment to its original state at the start of the course, you can click DELETE LAB to remove the entire classroom environment. After the lab has been deleted, you can click PROVISION LAB to provision a new set of classroom systems.
+
+Warning
+The DELETE LAB operation cannot be undone. Any work you have completed in the classroom environment up to that point will be lost.
+
+The Autostop Timer
+
+The Red Hat Online Learning enrollment entitles you to a certain amount of computer time. To help conserve allotted computer time, the ROL classroom has an associated countdown timer, which shuts down the classroom environment when the timer expires.
+
+To adjust the timer, click MODIFY to display the New Autostop Time dialog box. Set the number of hours until the classroom should automatically stop. Note that there is a maximum time of ten hours. Click ADJUST TIME to apply this change to the timer settings.
+</pre>
+</body>
+</html>
