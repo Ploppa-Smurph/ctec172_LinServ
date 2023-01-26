@@ -167,9 +167,21 @@ put data into a created file with <b><i>echo</i></b>
 
 
 <h3>vid 03 Managing Files Using the CLI</h3>
+<b>mkdir</b> - make directory
+<b>cp</b> - copy a file; ex: <i>cp file new-file</i>
+<b>cp -r</b> - copy a directory and it's contents; ex: <i>cp -r directory new-directory</i>
+<b>mv</b> - move a file; ex: <i>mv file new-file</i>
+<b>rm</b> - move a file; ex: <i>rm file</i>
+<b>rm -r</b> - remove a directory with files; ex: <i>rm -r directory</i> **can be dangerous, does not prompt about deletion
+<b>rmdir</b> - remove an empty directory
 
-
-<h3>vid 04</h3>
+<h3>vid 04 Making Links Between Files & </h3>
+<b>Hard Link</b> - ex: <b><i>ln newfile.txt /tmp/newfile-hlink2.txt</i></b> -- when you update 1 file the other is changed also
+    * you can find out if files are hard links of each other using the 'inode number', <b>ls -i</b>
+    
+<b>Soft Link / Symbolic Link</b> - ex: <b><i>ln -s</i></b> -- can create a link to a different file system or a directory 
+    * if you <b>ls -l</b> and the first character of the permissions is 'l' that means it is a soft link
+        ** dangling softlinks -- if you delete the original and not the link then the soft link will persist and point to nothing
 
 <h2>Ch 04: Getting Help in RedHat Enterprise Linux</h2>
 
