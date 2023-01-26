@@ -130,6 +130,16 @@ Ctrl+R	         Search the history list of commands for a pattern.
 
 <b>history</b> = will show the commands that have been entered
     ** if you type <b>!12</b> you will run the 12th command that was run in the history 
+<h2>Summary Ch 02</h2>
+In this chapter, you learned:
+    - The Bash shell is a command interpreter that prompts interactive users to specify Linux commands.
+    - Many commands have a --help option that displays a usage message or screen.
+    - Using workspaces makes it easier to organize multiple application windows.
+    - The Activities button located at the upper-left corner of the top bar provides an overview mode that helps a user organize windows and start applications.
+    - The file command scans the beginning of a file's contents and displays what type it is.
+    - The head and tail commands display the beginning and end of a file, respectively.
+    - You can use Tab completion to complete file names when typing them as arguments to commands.
+    
 <h2>Ch 03: Managing Files from the CLI</h2>
 <h3>vid 01 Linux File System</h3>
 <b>which</b> command - tells you where the command is stored
@@ -183,14 +193,32 @@ put data into a created file with <b><i>echo</i></b>
     * if you <b>ls -l</b> and the first character of the permissions is 'l' that means it is a soft link
         ** dangling softlinks -- if you delete the original and not the link then the soft link will persist and point to nothing
 
+<h2>Summary Ch 03</h2>        
+<pre>
+In this chapter, you learned:
+    - Files on a Linux system are organized into a single inverted tree of directories, known as a file-system hierarchy.
+    - Absolute paths start with a / and specify the location of a file in the file-system hierarchy.
+    - Relative paths do not start with a / and specify the location of a file relative to the current working directory.
+    - Five key commands are used to manage files: mkdir, rmdir, cp, mv, and rm.
+    - Hard links and soft links are different ways to have multiple file names point to the same data.
+    - The Bash shell provides pattern matching, expansion, and substitution features to help you efficiently run commands.
+</pre>
+
 <h2>Ch 04: Getting Help in RedHat Enterprise Linux</h2>
+<h3>vid 01 'man' command</h3>
+gives all arguemenst and options for a command
+ex: <b><i>man 5 ls</i></b>
 
-<h3>vid 01</h3>
+<h3>vid 02 Introducing GNU</h3>
+using info pages -- <b><i>pinfo</i></b>
 
-<h3>vid 02</h3>
-
-<h3>vid 03</h3>
-
+ex: <b><i>pinfo tar</i></b> -- different from 'man' page, but will open a man page if there is no 'info' file -- so you can always use 'pinfo'
+<h2>Summary Ch 04</h2>
+In this chapter, you learned:
+    - Man pages are viewed with the man command and provide information on components of a Linux system, such as files, commands, and functions.
+    - By convention, when referring to a man page the name of a page is followed by its section number in parentheses.
+    - Info documents are viewed with the pinfo command and are made up of a collection of hypertext nodes, providing information about software packages as a whole.
+    - The navigational keystrokes used by man and pinfo are slightly different.
 </pre>
 </body>
 </html>
