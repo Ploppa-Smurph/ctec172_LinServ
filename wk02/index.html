@@ -130,15 +130,44 @@ Ctrl+R	         Search the history list of commands for a pattern.
 
 <b>history</b> = will show the commands that have been entered
     ** if you type <b>!12</b> you will run the 12th command that was run in the history 
-
-
-    
 <h2>Ch 03: Managing Files from the CLI</h2>
-<h3>vid 01</h3>
+<h3>vid 01 Linux File System</h3>
+<b>which</b> command - tells you where the command is stored
+<i>/bin</i> directory most binary command files
 
-<h3>vid 02</h3>
+<i>/usr</i> contains installed software and libraries
 
-<h3>vid 03</h3>
+<i>/etc</i> directory has most configuration files
+    * ex: the hostname for the system -- you can <i>cat hostname</i> or <i>cat hosts</i> and see configurations for the system
+
+<i>/var</i> directory has variables
+
+<i>/run</i> directory is runtime information and will change on reboot 
+
+<i>/home</i> directory is the home for every user (Root's home is the root / directory #) 
+
+<i>tmp</i> is a temporary files -- will auto delete files if not changed in 30 days
+
+<i>boot</i> contains kernel, grub, everything needed to boot the system
+
+<i>dev</i> has the device files for all the hardware -- device drivers
+<h3>vid 02 Absolute and Relative Paths</h3>
+<b>Absolute</b> contains the root = /home/student/Downloads
+
+put data into a created file with <b><i>echo</i></b> 
+    - ex: $ touch file01
+          $ echo "This is data for file01" >> file01  (this <i>appends</i> the text into file01)
+
+** if you <i>touch</i> an existing file then it will update the date / time information of the file 
+
+<b>ls -lR</b> == will give a recursive detailed list of files
+<b>ls -alR</b> == hidden, detailed, recursive list
+
+<b><i>cd ~</i></b> take you back to home directory
+
+
+<h3>vid 03 Managing Files Using the CLI</h3>
+
 
 <h3>vid 04</h3>
 
