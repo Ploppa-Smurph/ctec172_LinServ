@@ -10,16 +10,74 @@
 <h1>CTEC-172 Linux Server wk03 </h1>
 <pre>
 <h2>Chap 05 Creating, Viewing, Editing Files</h2>
+<h3>outputting to terminal or to file</h3>
+consider the following examples:
 
+Save a time stamp for later reference.
+    [user@host ~]$ date > /tmp/saved-timestamp
 
+Copy the last 100 lines from a log file to another file.
+    [user@host ~]$ tail -n 100 /var/log/dmesg > /tmp/last-100-boot-messages
+
+Concatenate four files into one.
+    [user@host ~]$ cat file1 file2 file3 file4 > /tmp/all-four-in-one
+
+List the home directory's hidden and regular file names into a file.
+    [user@host ~]$ ls -a > /tmp/my-file-names
+
+Append output to an existing file.
+    [user@host ~]$ echo "new line of information" >> /tmp/many-lines-of-information
+    [user@host ~]$ diff previous-file current-file >> /tmp/tracking-changes-made
+
+The next few commands generate error messages because some system directories are inaccessible to normal users. Observe as the error messages are redirected. Redirect errors to a file while viewing normal command output on the terminal.
+    [user@host ~]$ find /etc -name passwd 2> /tmp/errors
+
+Save process output and error messages to separate files.
+    [user@host ~]$ find /etc -name passwd > /tmp/output 2> /tmp/errors
+
+Ignore and discard error messages.
+    [user@host ~]$ find /etc -name passwd > /tmp/output 2> /dev/null
+
+Store output and generated errors together.
+    [user@host ~]$ find /etc -name passwd &> /tmp/save-both
+
+Append output and generated errors to an existing file.
+    [user@host ~]$ find /etc -name passwd >> /tmp/save-both 2>&1
+<h3>editing using VIM</h3>
+- An i keystroke enters insert mode, where all text typed becomes file content. Pressing Esc returns to command mode.
+- A v keystroke enters visual mode, where multiple characters may be selected for text manipulation. Use Shift+V for multiline and Ctrl+V for block selection. The same keystroke used to enter visual mode (v, Shift+V or Ctrl+V) is used to exit.
+- The : keystroke begins extended command mode for tasks such as writing the file (to save it), and quitting the Vim editor.
+<h3>Lab 05</h3>
+1) On workstation, from the student home directory, use the ls -al command to redirect a long listing of all content to a file named editing_final_lab.txt.
+    [student@workstation ~]$ ls -al > editing_final_lab.txt
+
+2)
+
+3)
+<h3>Summary</h3>
+In this chapter, you learned:
+    - Running programs, or processes, have three standard communication channels, standard input, standard output, and standard error.
+    - You can use I/O redirection to read standard input from a file or write the output or errors from a process to a file.
+    - Pipelines can be used to connect standard output from one process to standard input of another process, and can be used to format output or build complex commands.
+    - You should know how to use at least one command-line text editor, and Vim is generally installed.
+    - Shell variables can help you run commands and are unique to a particular shell session.
+    - Environment variables can help you configure the behavior of the shell or the processes it starts.
 <h2>Chap 06 Managing Local User Groups</h2>
-
-
+<h3>Lab 06 Managing Local Users and Groups</h3>
+<h2>Summary</h2>
+In this chapter, you learned:
+    - There are three main types of user account: the superuser, system users, and regular users.
+    - A user must have a primary group and may be a member of one or more supplementary groups.
+    - The three critical files containing user and group information are /etc/passwd, /etc/group, and /etc/shadow.
+    - The su and sudo commands can be used to run commands as the superuser.
+    - The useradd, usermod, and userdel commands can be used to manage users.
+    - The groupadd, groupmod, and groupdel commands can be used to manage groups.
+    - The chage command can be used to configure and view password expiration settings for users.
 <h2>Chap 07 Controlling Access to Files</h2>
 
 
 
-
+<h2>Summary</h2>
 </pre>
 </body>
 </html>
