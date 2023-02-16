@@ -21,12 +21,21 @@ In this chapter, you learned:
 <h3>Quiz #10</h3>
 <h3>Lab: Analyzing and Storing Logs</h3>
 <h3>Summary</h3>
-    -
+    - The systemd-journald and rsyslog services capture and write log messages to the appropriate files.
+    - The /var/log directory contains log files.
+    - Periodic rotation of log files prevent them from filling up the file system space.
+    - The systemd journals are temporary and do not persist across reboot.
+    - The chronyd service helps to synchronize time settings with a time source.
+    - The time zone of the server can be updated based on its location.
 <h3>Quiz #11</h3>
 
 <h3>Lab: Managing Networking</h3>
 <h3>Summary</h3>
-    -
+    - The TCP/IP network model is a simplified, four-layered set of abstractions that describes how different protocols interoperate in order for computers to send traffic from one machine to another over the Internet.
+    - IPv4 is the primary network protocol used on the Internet today. IPv6 is intended as an eventual replacement for the IPv4 network protocol. By default, Red Hat Enterprise Linux operates in dual-stack mode, using both protocols in parallel.
+    - NetworkManager is a daemon that monitors and manages network configuration.
+    - The nmcli command is a command-line tool for configuring network settings with NetworkManager.
+    - The system's static host name is stored in the /etc/hostname file. The hostnamectl command is used to modify or view the status of the system's host name and related settings. The hostname command displays or temporarily modifies the system's host name.
 <h3>Quiz #12</h3>
 
 
