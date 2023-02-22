@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-172 wk06 RHEL </title>
+</head>
+<body>
+<pre>
+<h1>CTEC-172 wk06 RHEL</h1>
+<h2>ch13 Archiving and Transferring Files</h2>
+In this lab, you will use tar, rsync, and scp to archive and back up the contents of directories.
+    - Synchronize a remote directory to a local directory.
+    - Create an archive of the contents of a synchronized directory.
+    - Securely copy an archive to a remote host.
+    - Extract an archive.
+<h3>Summary</h3>
+    - The tar command creates an archive file from a set of files and directories, extracts files from the archive, and lists the contents of an archive.
+    - The tar command provides a set of different compression methods reduce archive size.
+    - Besides providing a secure remote shell, the SSH service also provides the scp and sftp commands as secure ways to transfer files from and to a remote system running the SSH server.
+    - The rsync command securely and efficiently synchronizes files between two directories, either one of which can be on a remote system.
+
+<h2>ch14 Installing and Updating Software</h2>
+    -     
+<h3>Summary</h3>
+    - Red Hat Subscription Management provides tools to entitle machines to product subscriptions, get updates to software packages, and track information about support contracts and subscriptions used by the systems.
+    - Software is provided as RPM packages, which make it easy to install, upgrade, and uninstall software from the system.
+    - The rpm command can be used to query a local database to provide information about the contents of installed packages and install downloaded package files.
+    - yum is a powerful command-line tool that can be used to install, update, remove, and query software packages.
+    - Red Hat Enterprise Linux 8 uses Application Streams to provide a single repository to host multiple versions of an application's packages and its dependencies.
+<h2>ch15 Accessing Linux File Systems</h2>    
+<h3>Summary</h3>
+    - Storage devices are represented by a special file type called block device.
+    - The df command reports total disk space, used disk space, and free disk space on all mounted regular file systems.
+    - The mount command allows the root user to manually mount a file system.
+    - All processes need to stop accessing the mount point in order to successfully unmount the device.
+    - The removable storage devices are mounted in the /run/media directory when using the graphical environment.
+    - The find command performs a real-time search in the local file systems to find files based on search criteria.
+</pre>    
+</body>
+</html>
